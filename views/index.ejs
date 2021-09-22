@@ -2,20 +2,43 @@
 <%- include('./partials/header.ejs') %>
 
 
+  <br/>
+
+    <table class="table">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Source</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+    </thead>
+
+    <% for (let i = 0; i < data.length; i++) { %>
+        <% let j = i + 1 %>
+        <tbody>
+            <tr>
+              <th scope="row" class="text-secondary"><%= j %></th>
+              <td class="text-secondary"><%= data[i].name %></td>
+              <td class="text-secondary"><%= data[i].description %></td>
+              <td class="text-secondary"><%= data[i].source %></td>
+              <td ><a href="/index/<%= data[i].id %>" class="badge badge-primary">Details</a></td>
+              <td>
+                <a href="/index/<%= data[i].id %>/edit" class="badge badge-success">Update</a>
+                </td>
+              <td>
+                <form action="/index/<%= data[i].id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete" class="btn btn-link btn-sm text-danger">
+                </form>
+                </td>
+            </tr>
+        </tbody>
    
-    <h1>Critical Spreadsheet App</h1>
-    <div></div>
-
-    <% for (let i=0; i<data.length; i++) { %>
-    <li><%= data[i].name %> <br/>
-        <a href="/index/<%= data[i].id %>">View Record</a>
-        <form action="/index/<%= data[i].id %>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete">
-        </form>
-
-</li>
-
     <% } %>
+</table>
 
 <%- include('./partials/footer.ejs') %>
     

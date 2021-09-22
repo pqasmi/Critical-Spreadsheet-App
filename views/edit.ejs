@@ -2,9 +2,9 @@
 <%- include('./partials/header.ejs') %>
 
     <form action="/index/<%= data.id %>?_method=PUT" method="POST">
-        Name: <input type="text" name="name" /> <br/>
-        Description:  <input type="text" name="description" /> <br/>
-        Source:  <input type="text" name="source"> <br/>
+        Name: <input type="text" name="name" value="<%= data.name %>" /> <br/>
+        Description:  <input type="text" name="description" value="<%= data.description %>" /> <br/>
+        Source:  <input type="text" name="source" value="<%= data.source %>"> <br/>
 
 
         <input type="submit" value="Update" />
