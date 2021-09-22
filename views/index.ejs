@@ -1,0 +1,21 @@
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/header.ejs') %>
+
+
+   
+    <h1>Critical Spreadsheet App</h1>
+    <div></div>
+
+    <% for (let i=0; i<data.length; i++) { %>
+    <li><%= data[i].name %> <br/>
+        <a href="/index/<%= data[i].id %>">View Record</a>
+        <form action="/index/<%= data[i].id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete">
+        </form>
+
+</li>
+
+    <% } %>
+
+<%- include('./partials/footer.ejs') %>
+    

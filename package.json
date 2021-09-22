@@ -1,0 +1,27 @@
+{
+  "name": "Critical-Spreadsheet-App",
+  "version": "1.0.0",
+  "description": "Allow Users to track, record and review spreadsheets used in Finance and Operations",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pqasmi/Critical-Spreadsheet-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pqasmi/Critical-Spreadsheet-App/issues"
+  },
+  "homepage": "https://github.com/pqasmi/Critical-Spreadsheet-App#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.0.7"
+  }
+}
