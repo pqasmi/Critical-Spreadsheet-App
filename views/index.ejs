@@ -1,11 +1,37 @@
 <%- include('./partials/head.ejs') %>
 <%- include('./partials/header.ejs') %>
 
+<br/>
 
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-sm">
+        <div id="options">
+            <select class="custom-select">
+                <option selected>Select Location</option>
+                <option value="1">Americas</option>
+                <option value="2">EMEA</option>
+                <option value="3">APAC</option>
+              </select>
+            </div> 
+      </div>
+      <div class="col-sm">
+        <select class="custom-select">
+            <option selected>Reporting Entity</option>
+            <option value="1">New EVs</option>
+            <option value="2">Solar</option>
+            <option value="3">Pre-owned EVs</option>
+          </select>
+        </div> 
+
+  </div>
   <br/>
 
+
+
     <table class="table">
-    <thead>
+    <thead  class="thead-dark">
         <tr>
           <th scope="col">#</th>
           <th scope="col">Name</th>
