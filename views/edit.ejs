@@ -1,12 +1,24 @@
 <%- include('./partials/head.ejs') %>
 <%- include('./partials/header.ejs') %>
+<h2>Update Record for : <%= data.name %> </h2>
 
     <form action="/index/<%= data.id %>?_method=PUT" method="POST">
-        Name: <input type="text" name="name" value="<%= data.name %>" /> <br/>
-        Description:  <input type="text" name="description" value="<%= data.description %>" /> <br/>
-        Source:  <input type="text" name="source" value="<%= data.source %>"> <br/>
-
-
+        <table class="table-sm">
+            <tbody>
+              <tr>
+                <td>Name: </td>
+                <td><input type="text" name="name" value="<%= data.name %>"/></td>
+              </tr>
+              <tr>
+                <td>Description: </td>
+                <td><input type="text" name="description" value="<%= data.description %>" /> </td>
+              </tr>
+              <tr>
+                <td>Source: </td>
+                <td><input type="text" name="source" value="<%= data.source %>"></td>
+              </tr>
+            </tbody>
+          </table>
         <input type="submit" value="Update" />
     </form>
     
