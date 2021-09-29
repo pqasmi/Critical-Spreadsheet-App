@@ -4,39 +4,20 @@
 <br/>
 
 
-<div class="container-fluid">
-    <div class="row">
-      <div class="col-sm">
-        <div id="options">
-            <select class="custom-select">
-                <option selected>Select Location</option>
-                <option value="1">Americas</option>
-                <option value="2">EMEA</option>
-                <option value="3">APAC</option>
-              </select>
-            </div> 
-      </div>
-      <div class="col-sm">
-        <select class="custom-select">
-            <option selected>Reporting Entity</option>
-            <option value="1">New EVs</option>
-            <option value="2">Solar</option>
-            <option value="3">Pre-owned EVs</option>
-          </select>
-        </div> 
-
-  </div>
   <br/>
 
 
 
-    <table class="table">
+    <table class="table table responsive table-sm table-hover">
     <thead  class="thead-dark">
         <tr>
           <th scope="col">#</th>
           <th scope="col">Name</th>
           <th scope="col">Description</th>
-          <th scope="col">Source</th>
+          <th scope="col">Impact</th>
+          <th scope="col">Data Source</th>
+          <th scope="col">Location</th>
+          <th scope="col">Unit</th>
           <th scope="col"></th>
           <th scope="col"></th>
           <th scope="col"></th>
@@ -50,7 +31,10 @@
               <th scope="row" class="text-secondary"><%= j %></th>
               <td class="text-secondary"><%= data[i].name %></td>
               <td class="text-secondary"><%= data[i].description %></td>
+              <td class="text-secondary">$<%= data[i].plImpact.toLocaleString()%></td>
               <td class="text-secondary"><%= data[i].source %></td>
+              <td class="text-secondary"><%= data[i].location %></td>
+              <td class="text-secondary"><%= data[i].reportingUnit %></td>
               <td ><a href="/index/<%= data[i].id %>" class="badge badge-primary">Details</a></td>
               <td>
                 <a href="/index/<%= data[i].id %>/edit" class="badge badge-success">Update</a>

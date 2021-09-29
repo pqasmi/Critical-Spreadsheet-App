@@ -5,9 +5,10 @@ const { Schema , model } = mongoose
 const LoggerSchema = new Schema({
     name: {type: String, required: true},
     description: {type: String, required: true},
+    plImpact: {type: Number, required: false},
     source: {type: String, required: true},
-    // erp: {type: String, required: true},
-    // dependencies: {type: String, required: false},
+    location: {type: String, required: true},
+    reportingUnit: {type: String, required: false},
     // preparer: {type: String, required: false},
     // reviewer: {type: String, required: false},
     // amount: {type: String, required: false},

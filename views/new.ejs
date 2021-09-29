@@ -2,9 +2,6 @@
 <%- include('./partials/header.ejs') %>
 
 
-
-
-    
     <form action="/index" method="POST">
         <div class="form-floating mb-3">
             <input type="text" class="form-control" name="name" id="floatingInput" placeholder="Spreadsheet Name">
@@ -13,10 +10,19 @@
             <input type="text" class="form-control" name="description" id="floatingInput" placeholder="Description">
         </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" name="source" id="floatingInput" placeholder="Source">
+            <input type="text" class="form-control" name="plImpact" id="floatingInput" placeholder="Financial Impact $">
         </div>
-
-        <input type="submit" class="btn btn-secondary" value="Submit" />
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="source" id="floatingInput" placeholder="Data Source">
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="location" id="floatingInput" placeholder="Location">
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="reportingUnit" id="floatingInput" placeholder="Reporting Unit">
+        </div>
+<br/>
+        <input type="submit" class="btn btn-success" value="Submit" style="margin-left: 1   0px;" />
     </form>
 
 <%- include('./partials/footer.ejs') %>

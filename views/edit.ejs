@@ -14,12 +14,28 @@
                 <td><input type="text" name="description" value="<%= data.description %>" /> </td>
               </tr>
               <tr>
+                <td>Financial Impact: </td>
+                <td><input type="text" name="plImpact" value="<%= data.plImpact %>" /> </td>
+              </tr>
+              <tr>
                 <td>Source: </td>
                 <td><input type="text" name="source" value="<%= data.source %>"></td>
               </tr>
+              <tr>
+                <td>Location: </td>
+                <td><input type="text" name="location" value="<%= data.location %>"></td>
+              </tr>
+              <tr>
+                <td>Reporting Unit: </td>
+                <td><input type="text" name="reportingUnit" value="<%= data.reportingUnit %>"></td>
+              </tr>
+
             </tbody>
+           
           </table>
-        <input type="submit" value="Update" />
+          <br/>
+          
+        <input class="btn btn-success" type="submit" value="Update" style="margin-left: 130px;" />
     </form>
     
 <%- include('./partials/footer.ejs') %>
