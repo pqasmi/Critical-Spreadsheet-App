@@ -4,8 +4,18 @@ const app = express()
 const PORT = 3000
 const methodOverride = require('method-override')
 const multer = require('multer')
-const fileStorageEngine = multer.diskStorage
-const upload = multer({storage:})
+const fileStorageEngine = multer.diskStorage({
+  //destination for files
+  destination: (req, file, callback) => {
+    callback(null, './public/xls')
+  },
+  //add extension to name
+  filename: (request,file,callback) => {
+  callback(null, Date.now() + file.originalname)
+  }
+
+})
+const upload = multer({storage: fileStorageEngine})
 
 
 //Setup Mongoose Database

@@ -2,6 +2,22 @@ const express = require('express')
 
 const router = express.Router()
 
+const multer = require('multer')
+const fileStorageEngine = multer.diskStorage({
+  //destination for files
+  destination: (req, file, callback) => {
+    callback(null, './public/xls')
+  },
+  //add extension to name
+  filename: (request,file,callback) => {
+  callback(null, Date.now() + file.originalname)
+  }
+
+})
+const upload = multer({storage: fileStorageEngine})
+
+
+
 // making an instance of express router
 const BuData1 = require('../models/data')  
 
@@ -34,7 +50,7 @@ router.get('/:id', (req,res) => {
         })
         })
     
-router.post('/', (req,res) => {
+router.post('/', upload.single('excel'), (req,res) => {
         BuData1.create(req.body, (error, newSpreadsheet) =>{
     if(error) {
         console.log(error)
