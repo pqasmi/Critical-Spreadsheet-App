@@ -7,7 +7,7 @@ const methodOverride = require('method-override')
 //Setup Mongoose Database
 const mongoose = require('mongoose')
 const BuData1 = require('./models/data')  
-const mongoURI = 'mongodb://localhost:27017/logger'
+const mongoURI = 'mongodb+srv://admin:Internet123!@seir-flex-622.x4we6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const db = mongoose.connection
 
 mongoose.connect(mongoURI, {
