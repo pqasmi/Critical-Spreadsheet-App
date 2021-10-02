@@ -15,6 +15,15 @@ Node.js, Multer, Express, Mongoose & MongoDB
 As a User:
 I will be able to record create new records and add critical spreadsheets, as business evolves this feature will be helpful. I will also be able to upload the supporting spreadsheet and files used.
 
+Reporting Unit Name: "String"
+Report Description: "String"
+Description of source information: "String"
+Preparer Name: "String"
+Approver Name: "String"
+Source ERP: "String"
+Location: "String"
+P&L Impact: Number
+
 I will be able to edit any existing records
 
 I will be able to Delete a record if not needed
